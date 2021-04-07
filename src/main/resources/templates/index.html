@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>爬虫</title>
+<link rel="stylesheet" href="css/index.css">
+<script src="js/vue.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/axios.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="/js/vue-router.js" type="text/javascript" charset="utf-8"></script>
+<script src="/components/amazon.js"></script>
+<script src="/router.js"></script>
+<!-- 引入组件库 -->
+<script src="js/index.js"></script>
+<style type="text/css">
+</style>
+</head>
+<body>
+<el-container id="main" direction="vertical">  
+  <el-header>
+	  <el-menu
+		  mode="horizontal"
+		  background-color="#545c64"
+		  text-color="#fff"
+		  active-text-color="#ffd04b" router="true">
+	  <el-menu-item index="/">亚马逊</el-menu-item>
+	</el-menu>
+  </el-header>
+	  <el-main>
+		  <router-view></router-view>
+	  </el-main>
+  <el-footer>				  				  
+  </el-footer>		  
+</el-container>
+<script type="text/javascript">
+new Vue({
+	el:'#main',
+	router
+})
+</script>
+</body>
+</html>
